@@ -64,7 +64,6 @@ def user_input(user_question):
     chain = get_conversational_chain()
 
     response = chain({"input_documents": docs, "question": user_question}, return_only_outputs=True)
-
     st.write("Reply: ", response["output_text"])
 
 
@@ -83,8 +82,9 @@ def main():
     pdf_docs = st.sidebar.file_uploader("Upload your PDF Files and Click on the Submit & Process Button", accept_multiple_files=True)
     if st.sidebar.button("Submit & Process"):
         with st.spinner("Processing..."):
-            raw_text = get_pdf_text(pdf_docs)
-            text_chunks = get_text_chunks(raw_text)
+            pdftext = get_pdf_text(pdf_docs)
+            text=anonymizedtext(pdftext)
+            text_chunks = get_text_chunks(pdftext)
             get_vector_store(text_chunks)
             st.success("Done")
 

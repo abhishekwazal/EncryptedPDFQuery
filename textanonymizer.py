@@ -42,4 +42,4 @@ anonymizedtext=anonymizer.anonymize(pdftext)
 
 anonymizer_with_memory = PresidioReversibleAnonymizer()
 
-anonymizer_with_memory.anonymize(anonymizedtext)
+deanonymizedtext=anonymizer_with_memory.anonymize(anonymizedtext)
