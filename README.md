@@ -1,3 +1,4 @@
+
 # EncryptedPDFQuery
 
 EncryptedPDFQuery offers reading functionality alongside querying from multiple PDFs at a time. 
@@ -14,14 +15,18 @@ Explore, search, and analyze your PDFs like never before with our intuitive and 
 Insert gif or link to demo
 
 https://abhishekwazal-encryptedpdfquery-app-h037kp.streamlit.app/
-## Technologies used
+## Technologies and Libraries used
 
 streamlit
 
 langchain
+
+Google Gemini
 
 PyPDF2
 
 langchain
 
 Presidio Anonymizer
+
+Faiss
