@@ -9,7 +9,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 from dotenv import load_dotenv
-from textanonymizer import *
+
 
 load_dotenv()
 os.getenv("GOOGLE_API_KEY")
@@ -83,7 +83,7 @@ def main():
     if st.sidebar.button("Submit & Process"):
         with st.spinner("Processing..."):
             pdftext = get_pdf_text(pdf_docs)
-            text=anonymizedtext(pdftext)
+            # text=anonymizedtext(pdftext)
             text_chunks = get_text_chunks(pdftext)
             get_vector_store(text_chunks)
             st.success("Done")
